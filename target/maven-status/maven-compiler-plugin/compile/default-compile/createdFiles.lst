@@ -1,0 +1,5 @@
+com\example\cardata\model\CarData.class
+com\example\cardata\repository\CarDataRepository.class
+com\example\cardata\service\CarDataService.class
+com\example\cardata\CarDataApplication.class
+com\example\cardata\controller\CarDataController.class

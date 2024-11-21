@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Data API – Spring Boot</title>
+</head>
+<body>
+    <h1>Car Data API – Spring Boot</h1>
+    <p>In this challenge, you are part of a team that is building a car data API. One
+        requirement is for a REST API service to manage car data details using Spring boot. You
+        will need to add functionality to add and show car data as well as list
+        all the products in the system. The team has come up with a set of requirements,
+        including the API format, response codes, and the structure for the queries you
+        must implement.
+        The definitions and detailed requirements list follow. You will be graded on
+        whether your application performs data retrieval and manipulation based on given
+        use cases exactly as described in the requirements.</p>
+    <h2>Each product has the following structure:</h2>
+    <ul>
+        <li>id: the unique ID of the car data [int]</li>
+        <li>model: the name of the model [String]</li>
+        <li>manufacturedYear: the manufactured year of the model [int]</li>
+        <li>company: the company name [String]</li>
+        <li>bodyType: the type of the model [String]</li>
+        <li>price: the price of the model [int]</li>
+        <li>fuelType: the fuel type of the body type [String]</li>
+        <li>seatingCapacity: the seating capacity of the body type [int]</li>
+    </ul>
+
+    <h2>Sample product JSON:</h2>
+    <pre>
+        {
+            "model": "City",
+            "manufacturedYear": 2024,
+            "company": "Honda",
+            "bodyType": "sedan",
+            "price": 2000000.0,
+            "fuelType": "petrol",
+            "seatingCapacity": 5
+        }
+    </pre>
+
+    <h2>API Endpoints:</h2>
+    <ol>
+        <li>
+            <h3>Adding a new car data entry:</h3>
+            <ul>
+                <li>Endpoint: <code>POST /carData/add</code></li>
+                <li>Request Body: JSON object containing car data details</li>
+                <li>Response Code: 201 if successful, 400 if data validation fails</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Retrieving all car data entries:</h3>
+            <ul>
+                <li>Endpoint: <code>GET /carData/list</code></li>
+                <li>Response Code: 200 if successful, 400 if no data exists</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Updating car data information:</h3>
+            <ul>
+                <li>Endpoint: <code>PATCH /carData/update/{id}</code></li>
+                <li>Request Body: JSON object containing updated car data details</li>
+                <li>Response Code: 200 if successful, 400 if no data provided, 404 if ID not found</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Deleting a car data entry by ID:</h3>
+            <ul>
+                <li>Endpoint: <code>DELETE /carData/delete/{id}</code></li>
+                <li>Response Code: 200 if successful, 404 if ID not found</li>
+            </ul>
+        </li>
+    </ol>
+
+</body>
+</html>
